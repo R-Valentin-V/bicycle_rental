@@ -9,10 +9,6 @@
 - продление аренды;
 - управление ремонтом;
 - аудит операций;
-- OLTP и DWH;
-- схема «звезда»;
-- ETL через PL/SQL;
-- витрины для BI.
 
 ## Архитектура
 
@@ -24,7 +20,6 @@ OLTP → STG → DIM/FACT
 - SQL
 - PL/SQL
 - DBMS_SCHEDULER
-- SCD Type 2
 - Star Schema
 
 ## Структура репозитория
@@ -35,8 +30,6 @@ OLTP → STG → DIM/FACT
 
 ## Основные сущности OLTP
 
-![OLTP ER-диаграмма](docs/images/er_oltp.png)
-
 - CLIENTS
 - BICYCLES
 - BOOKINGS
@@ -45,9 +38,10 @@ OLTP → STG → DIM/FACT
 - REPAIR_ORDERS
 - AUDIT_LOG
 
-## DWH
 
-![DWH Star Schema](docs/images/er_dwh.png)
+![OLTP ER-диаграмма](docs/images/er_oltp.png)
+
+## DWH
 
 Измерения:
 
@@ -61,3 +55,5 @@ OLTP → STG → DIM/FACT
 - FACT_RENTALS
 - FACT_PAYMENTS
 - FACT_REPAIRS
+
+ ![DWH Star Schema](docs/images/er_dwh.png)
